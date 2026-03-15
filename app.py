@@ -44,7 +44,7 @@ uploaded_file= st.file_uploader("Upload a long PDF", type="pdf")
 
 if uploaded_file is not None:
     if st.button("Summarize Document"):
-        with st.status("Processig=g=ng PDF...", expanded=True) as status:
+        with st.status("Processing PDF...", expanded=True) as status:
             st.write("Extracting text from PDF...")
             raw_text=extract_text_from_pdf(uploaded_file)
             word_count=len(raw_text.split())
